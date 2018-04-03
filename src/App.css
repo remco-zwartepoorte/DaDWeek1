@@ -11,14 +11,14 @@
 }
 
 .revenue-card {
-  width: 450px;
-  height: 450px;
+  width: 474px;
+  height: 460px;
   filter: drop-shadow(5px 5px 10px #002568);
 }
 
 .revenue-card-header {
-  padding: 40px;
-  height: 50%;
+  padding: 48px;
+  height: 49%;
   color: white;
   background-color: #337cff;
   border-top-left-radius: 5px;
@@ -26,19 +26,20 @@
 }
 
 .revenue-card-header > h1 {
-  font-size: 40px;
+  font-size: 48px;
   font-weight: 300;
-  margin-top: 50px;
+  margin-top: 48px;
 }
 
 .revenue-card-header > h3 {
-  margin-top: 5px;
+  font-family: 'TruenoRegular';
+  margin-top: 0;
   font-weight: 700;
 }
 
 .revenue-card-data {
-  padding: 40px;
-  height: 50%;
+  padding: 48px;
+  height: 51%;
   background-color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;

@@ -22,10 +22,13 @@ const bardata = {
 };
 
 function formatPrice(millions) {
-  return (millions * 1000000).toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  });
+  return (millions * 1000000)
+    .toLocaleString('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 2,
+    })
+    .slice(0, -3);
 }
 
 const App = () => (
