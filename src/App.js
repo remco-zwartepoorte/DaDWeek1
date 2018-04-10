@@ -11,7 +11,7 @@ const data = {
   },
 };
 
-const bardata = {
+const barData = {
   labels: ['March', 'April'],
   datasets: [
     {
@@ -19,6 +19,32 @@ const bardata = {
       data: [1.9, 2.4],
     },
   ],
+};
+
+const barOptions = {
+  maintainAspectRatio: false,
+  legend: {
+    display: false,
+  },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          min: 0,
+          max: 4,
+          stepSize: 2,
+          fontSize: 18,
+        },
+      },
+    ],
+    xAxes: [
+      {
+        ticks: {
+          fontSize: 18,
+        },
+      },
+    ],
+  },
 };
 
 function formatPrice(millions) {
@@ -39,34 +65,7 @@ const App = () => (
         <h1>{formatPrice(data.mrr.april)}</h1>
       </div>
       <div className="revenue-card-data">
-        <Bar
-          data={bardata}
-          options={{
-            maintainAspectRatio: false,
-            legend: {
-              display: false,
-            },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    min: 0,
-                    max: 4,
-                    stepSize: 2,
-                    fontSize: 18,
-                  },
-                },
-              ],
-              xAxes: [
-                {
-                  ticks: {
-                    fontSize: 18,
-                  },
-                },
-              ],
-            },
-          }}
-        />
+        <Bar data={barData} options={barOptions} />
       </div>
     </article>
   </div>
